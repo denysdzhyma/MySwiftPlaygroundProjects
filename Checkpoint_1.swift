@@ -1,7 +1,7 @@
 //
-//  main.swift
+//  Checkpoint_1.swift
 //  Checkpoint_1
-//
+//  
 //  Created by Denys on 2025-12-03.
 //
 
