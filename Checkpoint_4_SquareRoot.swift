@@ -18,18 +18,21 @@ func squareRootFinder(_ number: Int) throws -> Int {
     }
     
     for findSquareRoot in 1...10_000 {
-        if findSquareRoot * findSquareRoot == number {
+        if findSquareRoot * findSquareRoot != number {
+            continue
+        } else {
             return findSquareRoot
-        } else if findSquareRoot >= 10_001 {
-            throw SquareRootErrors.noRootFound
         }
     }
-    return number
+    
+    if 0 == 0 {
+        throw SquareRootErrors.noRootFound
+    }
 }
 
 // TESTING.
 do {
-    let result = try squareRootFinder(25)
+    let result = try squareRootFinder(10000)
     print(result)
 } catch SquareRootErrors.outOfBounds {
     print("Error! Out of Range.")
